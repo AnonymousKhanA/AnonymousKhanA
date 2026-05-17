@@ -37,6 +37,22 @@ export function ProductCard({ product }: ProductCardProps) {
           <div className="absolute top-2 right-2 bg-accent text-accent-foreground px-2 py-1 rounded text-xs font-semibold">
             On Sale
           </div>
+          {/* Stock Badge */}
+          <div className="absolute bottom-2 left-2">
+            {product.stock === 0 ? (
+              <div className="bg-destructive text-destructive-foreground px-2 py-1 rounded text-xs font-semibold">
+                Out of Stock
+              </div>
+            ) : product.stock <= 5 ? (
+              <div className="bg-yellow-500 text-yellow-950 px-2 py-1 rounded text-xs font-semibold">
+                Only {product.stock} left
+              </div>
+            ) : (
+              <div className="bg-green-500 text-green-950 px-2 py-1 rounded text-xs font-semibold">
+                In Stock ({product.stock})
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Content */}
@@ -76,13 +92,20 @@ export function ProductCard({ product }: ProductCardProps) {
           <Button
             onClick={(e) => {
               e.preventDefault()
-              handleAddToCart()
+              if (product.stock > 0) {
+                handleAddToCart()
+              }
             }}
+            disabled={product.stock === 0}
             size="sm"
-            className="w-full gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
+            className={`w-full gap-2 ${
+              product.stock === 0
+                ? 'bg-muted text-muted-foreground cursor-not-allowed'
+                : 'bg-primary text-primary-foreground hover:bg-primary/90'
+            }`}
           >
             <ShoppingBag className="w-4 h-4" />
-            Add to Cart
+            {product.stock === 0 ? 'Out of Stock' : 'Add to Cart'}
           </Button>
         </div>
       </div>
