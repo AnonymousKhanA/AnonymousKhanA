@@ -1,7 +1,7 @@
 import { PRODUCTS, CATEGORIES } from '@/lib/products'
 import { ProductCard } from '@/components/product-card'
 import { Button } from '@/components/ui/button'
-import { Star, Truck, Shield, Zap } from 'lucide-react'
+import { Star, Shield, Zap } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -60,10 +60,6 @@ export default function Home() {
                   </Button>
                 </Link>
               </div>
-              <p className="text-sm mt-6 opacity-75 flex items-center gap-2">
-                <Truck className="w-4 h-4" />
-                Free shipping on orders over Rs. 2000
-              </p>
             </div>
             <div className="relative h-64 md:h-80 hidden md:block">
               <Image
