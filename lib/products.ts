@@ -7,6 +7,7 @@ export interface Product {
   description: string
   rating: number
   reviews: number
+  stock: number
 }
 
 export const CATEGORIES = [
@@ -29,6 +30,7 @@ export const PRODUCTS: Product[] = [
     description: 'Long-lasting premium lipstick with smooth finish',
     rating: 4.8,
     reviews: 156,
+    stock: 15,
   },
   {
     id: '2',
@@ -39,6 +41,7 @@ export const PRODUCTS: Product[] = [
     description: 'Professional grade foundation for all skin types',
     rating: 4.7,
     reviews: 203,
+    stock: 0,
   },
   {
     id: '3',
@@ -49,6 +52,7 @@ export const PRODUCTS: Product[] = [
     description: '12-color eye shadow palette with rich pigmentation',
     rating: 4.9,
     reviews: 187,
+    stock: 8,
   },
   {
     id: '4',
@@ -59,6 +63,29 @@ export const PRODUCTS: Product[] = [
     description: 'Volumizing mascara for dramatic lashes',
     rating: 4.6,
     reviews: 142,
+    stock: 25,
+  },
+  {
+    id: '25',
+    name: 'Blush & Contour Kit',
+    price: 1599,
+    image: 'https://images.unsplash.com/photo-1596462502278-e1c37be45dfb?w=500&h=500&fit=crop',
+    category: 'cosmetics',
+    description: 'Complete blush and contour palette for perfect makeup',
+    rating: 4.8,
+    reviews: 167,
+    stock: 12,
+  },
+  {
+    id: '26',
+    name: 'Face Serum',
+    price: 3499,
+    image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=500&fit=crop',
+    category: 'cosmetics',
+    description: 'Hydrating face serum with natural ingredients',
+    rating: 4.7,
+    reviews: 143,
+    stock: 3,
   },
   // Men's Clothing
   {
@@ -70,6 +97,7 @@ export const PRODUCTS: Product[] = [
     description: '100% premium cotton comfortable t-shirt',
     rating: 4.7,
     reviews: 234,
+    stock: 30,
   },
   {
     id: '6',
@@ -80,6 +108,7 @@ export const PRODUCTS: Product[] = [
     description: 'Elegant formal dress shirt for office and events',
     rating: 4.8,
     reviews: 178,
+    stock: 10,
   },
   {
     id: '7',
@@ -90,6 +119,7 @@ export const PRODUCTS: Product[] = [
     description: 'Comfortable and stylish casual jeans',
     rating: 4.6,
     reviews: 289,
+    stock: 18,
   },
   {
     id: '8',
@@ -100,6 +130,29 @@ export const PRODUCTS: Product[] = [
     description: 'Classic polo shirt in multiple colors',
     rating: 4.7,
     reviews: 156,
+    stock: 5,
+  },
+  {
+    id: '27',
+    name: 'Wool Sweater',
+    price: 2499,
+    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop',
+    category: 'mens-clothing',
+    description: 'Warm and comfortable wool sweater for winter',
+    rating: 4.6,
+    reviews: 122,
+    stock: 0,
+  },
+  {
+    id: '28',
+    name: 'Shorts',
+    price: 1099,
+    image: 'https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=500&h=500&fit=crop',
+    category: 'mens-clothing',
+    description: 'Comfortable summer shorts in various styles',
+    rating: 4.5,
+    reviews: 98,
+    stock: 22,
   },
   // Women's Clothing
   {
@@ -111,6 +164,7 @@ export const PRODUCTS: Product[] = [
     description: 'Beautiful elegant dress for any occasion',
     rating: 4.9,
     reviews: 201,
+    stock: 7,
   },
   {
     id: '10',
@@ -121,6 +175,7 @@ export const PRODUCTS: Product[] = [
     description: 'Comfortable casual top for daily wear',
     rating: 4.6,
     reviews: 167,
+    stock: 20,
   },
   {
     id: '11',
@@ -131,6 +186,7 @@ export const PRODUCTS: Product[] = [
     description: 'Premium designer jeans with perfect fit',
     rating: 4.8,
     reviews: 245,
+    stock: 14,
   },
   {
     id: '12',
@@ -141,6 +197,29 @@ export const PRODUCTS: Product[] = [
     description: 'Elegant summer saree with traditional design',
     rating: 4.7,
     reviews: 189,
+    stock: 9,
+  },
+  {
+    id: '29',
+    name: 'Kurti',
+    price: 1999,
+    image: 'https://images.unsplash.com/photo-1595815317424-b90eda55bdc4?w=500&h=500&fit=crop',
+    category: 'womens-clothing',
+    description: 'Traditional kurti in modern designs',
+    rating: 4.7,
+    reviews: 134,
+    stock: 16,
+  },
+  {
+    id: '30',
+    name: 'Blazer',
+    price: 4499,
+    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=500&fit=crop',
+    category: 'womens-clothing',
+    description: 'Professional blazer for office and formal wear',
+    rating: 4.8,
+    reviews: 156,
+    stock: 11,
   },
   // Perfumes
   {
@@ -152,6 +231,7 @@ export const PRODUCTS: Product[] = [
     description: 'Premium luxury perfume with long-lasting fragrance',
     rating: 4.9,
     reviews: 267,
+    stock: 6,
   },
   {
     id: '14',
@@ -162,6 +242,7 @@ export const PRODUCTS: Product[] = [
     description: 'Fresh casual fragrance for everyday use',
     rating: 4.6,
     reviews: 198,
+    stock: 19,
   },
   {
     id: '15',
@@ -172,6 +253,7 @@ export const PRODUCTS: Product[] = [
     description: 'Classic eau de toilette for men and women',
     rating: 4.7,
     reviews: 212,
+    stock: 13,
   },
   {
     id: '16',
@@ -182,6 +264,18 @@ export const PRODUCTS: Product[] = [
     description: 'Refreshing body spray for all day freshness',
     rating: 4.5,
     reviews: 134,
+    stock: 0,
+  },
+  {
+    id: '31',
+    name: 'Attar',
+    price: 2499,
+    image: 'https://images.unsplash.com/photo-1570538108519-280658a9215b?w=500&h=500&fit=crop',
+    category: 'perfumes',
+    description: 'Traditional attar with natural essence',
+    rating: 4.8,
+    reviews: 178,
+    stock: 11,
   },
   // Accessories
   {
@@ -193,6 +287,7 @@ export const PRODUCTS: Product[] = [
     description: 'Elegant premium watch for any occasion',
     rating: 4.8,
     reviews: 289,
+    stock: 4,
   },
   {
     id: '18',
@@ -203,6 +298,7 @@ export const PRODUCTS: Product[] = [
     description: 'Genuine leather belt with premium quality',
     rating: 4.7,
     reviews: 156,
+    stock: 28,
   },
   {
     id: '19',
@@ -213,6 +309,7 @@ export const PRODUCTS: Product[] = [
     description: 'UV-protected designer sunglasses',
     rating: 4.8,
     reviews: 201,
+    stock: 10,
   },
   {
     id: '20',
@@ -223,6 +320,29 @@ export const PRODUCTS: Product[] = [
     description: 'Premium silk scarf in elegant patterns',
     rating: 4.6,
     reviews: 142,
+    stock: 17,
+  },
+  {
+    id: '32',
+    name: 'Handbag',
+    price: 4999,
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=500&fit=crop',
+    category: 'accessories',
+    description: 'Premium leather handbag for women',
+    rating: 4.8,
+    reviews: 189,
+    stock: 2,
+  },
+  {
+    id: '33',
+    name: 'Pendant Necklace',
+    price: 2999,
+    image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=500&fit=crop',
+    category: 'accessories',
+    description: 'Elegant pendant necklace with gemstones',
+    rating: 4.7,
+    reviews: 145,
+    stock: 19,
   },
   // Trending Products
   {
@@ -234,6 +354,7 @@ export const PRODUCTS: Product[] = [
     description: 'Latest smartphone with advanced features',
     rating: 4.8,
     reviews: 456,
+    stock: 5,
   },
   {
     id: '22',
@@ -244,6 +365,7 @@ export const PRODUCTS: Product[] = [
     description: 'Premium wireless earbuds with noise cancellation',
     rating: 4.7,
     reviews: 334,
+    stock: 21,
   },
   {
     id: '23',
@@ -254,6 +376,7 @@ export const PRODUCTS: Product[] = [
     description: 'High capacity fast charging power bank',
     rating: 4.6,
     reviews: 267,
+    stock: 33,
   },
   {
     id: '24',
@@ -264,5 +387,28 @@ export const PRODUCTS: Product[] = [
     description: 'Durable premium phone protective case',
     rating: 4.5,
     reviews: 189,
+    stock: 0,
+  },
+  {
+    id: '34',
+    name: 'Wireless Charger',
+    price: 1999,
+    image: 'https://images.unsplash.com/photo-1609042231975-d1faa55c9a71?w=500&h=500&fit=crop',
+    category: 'trending',
+    description: 'Fast wireless charger compatible with all devices',
+    rating: 4.7,
+    reviews: 223,
+    stock: 24,
+  },
+  {
+    id: '35',
+    name: 'Laptop Stand',
+    price: 1499,
+    image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop',
+    category: 'trending',
+    description: 'Adjustable ergonomic laptop stand',
+    rating: 4.6,
+    reviews: 178,
+    stock: 1,
   },
 ]

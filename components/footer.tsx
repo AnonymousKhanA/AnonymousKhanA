@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail, Phone, Facebook, Instagram, MessageCircle } from 'lucide-react'
+import { Mail, Phone, MessageCircle } from 'lucide-react'
 
 export function Footer() {
   return (
@@ -81,24 +81,6 @@ export function Footer() {
                   className="opacity-80 hover:opacity-100 transition flex items-center gap-2"
                 >
                   <span>TikTok</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="opacity-80 hover:opacity-100 transition flex items-center gap-2"
-                >
-                  <Facebook className="w-4 h-4" />
-                  <span>Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="opacity-80 hover:opacity-100 transition flex items-center gap-2"
-                >
-                  <Instagram className="w-4 h-4" />
-                  <span>Instagram</span>
                 </a>
               </li>
             </ul>
